@@ -191,6 +191,28 @@
                     ]
                 },
                 {
+                    "type": "accessPolicies",
+                    "name": "jwengerPolicy",
+                    "apiVersion": "2018-08-01-preview",
+                    "properties": {
+                        "principal": {
+                            "tenantId": "cdc5aeea-15c5-4db6-b079-fcadd2505dc2",
+                            "objectId": "9e009c10-d8f3-4364-9356-cdd69683def5"
+                        },
+                        "permissions": [
+                            "ListIdentityProvider",
+                            "GetService",
+                            "CreateOrUpdateService",
+                            "GetToken",
+                            "CreateOrUpdateToken",
+                            "DeleteToken"
+                          ]
+                    },
+                    "dependsOn": [
+                        "[concat('Microsoft.Token/stores/', parameters('tokenStoreName'))]"
+                    ]
+                },
+                {
                     "type": "services",
                     "name": "dropbox",
                     "apiVersion": "2018-08-01-preview",
